@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Hero Service — A Month of Content. Done in 48 Hours.</title>
+<meta name="description" content="AI-powered social media management for small businesses. We handle everything — strategy, content, and scheduling — so you don't have to." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #1D9E75;
+    --green-light: #E1F5EE;
+    --green-mid: #9FE1CB;
+    --green-dark: #0F6E56;
+    --green-deeper: #085041;
+    --black: #0e0e0e;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --text-faint: #a0a0a0;
+    --border: rgba(0,0,0,0.09);
+    --border-strong: rgba(0,0,0,0.18);
+    --bg: #ffffff;
+    --bg-2: #f7f7f5;
+    --bg-dark: #0e0e0e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 2.5rem;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; font-size: 17px; letter-spacing: -0.5px;
+    text-decoration: none; color: var(--text);
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green); flex-shrink: 0;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a {
+    font-size: 14px; color: var(--text-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--black); color: white;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    padding: 10px 22px; border-radius: 100px; border: none; cursor: pointer;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.8; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 7rem 1.5rem 5rem;
+    max-width: 860px; margin: 0 auto; text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 0.5px solid var(--border-strong);
+    font-size: 13px; color: var(--text-muted);
+    padding: 6px 16px; border-radius: 100px; margin-bottom: 2.5rem;
+  }
+
+  .badge-live {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(29,158,117,0.2);
+  }
+
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 800; line-height: 1.05; letter-spacing: -2.5px;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero h1 .highlight {
+    color: var(--green);
+    display: inline-block;
+  }
+
+  .hero h1 .strikethrough {
+    text-decoration: line-through;
+    color: var(--text-faint);
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-size: 18px; color: var(--text-muted);
+    line-height: 1.75; max-width: 560px;
+    margin: 0 auto 3rem; font-weight: 300;
+  }
+
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+
+  .btn-black {
+    background: var(--black); color: white; border: none;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+    padding: 16px 32px; border-radius: 100px; cursor: pointer;
+    text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-black:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  .btn-ghost {
+    background: transparent; color: var(--text);
+    border: 0.5px solid var(--border-strong);
+    font-family: 'DM Sans', sans-serif; font-size: 15px;
+    padding: 16px 32px; border-radius: 100px; cursor: pointer;
+    text-decoration: none; transition: border-color 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: flex; align-items: stretch; justify-content: center;
+    border: 0.5px solid var(--border-strong); border-radius: 16px;
+    max-width: 680px; margin: 0 auto; overflow: hidden;
+  }
+
+  .stat {
+    flex: 1; padding: 1.5rem 1rem; text-align: center;
+    border-right: 0.5px solid var(--border);
+  }
+  .stat:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2rem; font-weight: 800; letter-spacing: -1px;
+    color: var(--green); line-height: 1; margin-bottom: 4px;
+  }
+
+  .stat-label { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+  /* ── PROBLEM SECTION ── */
+  .problem {
+    padding: 6rem 1.5rem;
+    background: var(--bg-dark);
+    color: white;
+  }
+
+  .problem-inner { max-width: 860px; margin: 0 auto; }
+
+  .problem h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15; margin-bottom: 1.5rem;
+    max-width: 620px;
+  }
+
+  .problem h2 span { color: var(--green); }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; overflow: hidden; margin-top: 3rem;
+  }
+
+  .pain-item {
+    background: var(--bg-dark);
+    padding: 1.75rem;
+  }
+
+  .pain-x {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem; font-size: 14px; color: rgba(255,255,255,0.4);
+  }
+
+  .pain-item h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 15px; font-weight: 700; color: white;
+    margin-bottom: 6px;
+  }
+
+  .pain-item p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+  /* ── SOLUTION ── */
+  .solution { padding: 6rem 1.5rem; max-width: 960px; margin: 0 auto; }
+
+  .solution-header { text-align: center; margin-bottom: 4rem; }
+
+  .tag {
+    font-size: 12px; font-weight: 500; letter-spacing: 1.5px;
+    color: var(--text-faint); text-transform: uppercase;
+    display: block; margin-bottom: 1rem;
+  }
+
+  .solution-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
+  }
+
+  .solution-header p {
+    font-size: 17px; color: var(--text-muted);
+    max-width: 500px; margin: 1rem auto 0; line-height: 1.7;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .feature {
+    border: 0.5px solid var(--border);
+    border-radius: 16px; padding: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .feature:hover { border-color: var(--green-mid); transform: translateY(-3px); }
+
+  .feature.big {
+    grid-column: span 2;
+    background: var(--green-light);
+    border-color: var(--green-mid);
+    display: flex; gap: 2rem; align-items: center;
+  }
+
+  @media (max-width: 640px) { .feature.big { grid-column: span 1; flex-direction: column; } }
+
+  .feature-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: white; border: 0.5px solid var(--green-mid);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-bottom: 1.25rem;
+  }
+
+  .feature.big .feature-icon { background: white; margin-bottom: 0; }
+
+  .feature h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 17px; font-weight: 700; margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .feature.big h3 { font-size: 22px; color: var(--green-deeper); }
+
+  .feature p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  .feature.big p { font-size: 15px; color: var(--green-dark); line-height: 1.7; }
+
+  /* ── HOW IT WORKS ── */
+  .how { padding: 6rem 1.5rem; background: var(--bg-2); }
+  .how-inner { max-width: 860px; margin: 0 auto; }
+
+  .how-header { text-align: center; margin-bottom: 4rem; }
+  .how-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; letter-spacing: -1.5px;
+  }
+  .how-header p { font-size: 16px; color: var(--text-muted); margin-top: 0.75rem; }
+
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 20px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--green), transparent);
+  }
+
+  .tl-item {
+    display: flex; gap: 1.75rem;
+    padding: 0 0 2.5rem 0; position: relative;
+  }
+
+  .tl-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--green); color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; position: relative; z-index: 1;
+  }
+
+  .tl-content { padding-top: 8px; }
+
+  .tl-time {
+    font-size: 11px; font-weight: 500; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  .tl-content h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 17px; font-weight: 700; margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .tl-content p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── COMPARISON ── */
+  .compare { padding: 6rem 1.5rem; max-width: 860px; margin: 0 auto; }
+
+  .compare-header { text-align: center; margin-bottom: 3rem; }
+  .compare-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; letter-spacing: -1.5px;
+  }
+
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    border: 0.5px solid var(--border); border-radius: 16px;
+    overflow: hidden; font-size: 14px;
+  }
+
+  .compare-table th {
+    padding: 1rem 1.25rem; text-align: left;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700; font-size: 15px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .compare-table th:first-child { color: var(--text-muted); font-weight: 400; }
+  .compare-table th.us { background: var(--green-light); color: var(--green-deeper); }
+
+  .compare-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 0.5px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .compare-table td.us { background: rgba(29,158,117,0.04); font-weight: 500; color: var(--green-dark); }
+  .compare-table td:first-child { font-weight: 500; color: var(--text); }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  .tick { color: var(--green); font-weight: 700; }
+  .cross { color: #ccc; }
+
+  /* ── PRICING ── */
+  .pricing { padding: 6rem 1.5rem; background: var(--bg-2); }
+  .pricing-inner { max-width: 960px; margin: 0 auto; }
+
+  .pricing-header { text-align: center; margin-bottom: 3.5rem; }
+  .pricing-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; letter-spacing: -1.5px;
+  }
+  .pricing-header p { font-size: 16px; color: var(--text-muted); margin-top: 0.75rem; }
+
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .plan {
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: 18px; padding: 2rem; position: relative;
+  }
+
+  .plan.featured {
+    background: var(--bg-dark); border-color: var(--bg-dark);
+    color: white;
+  }
+
+  .plan-badge {
+    display: inline-block;
+    background: var(--green); color: white;
+    font-size: 11px; font-weight: 500; padding: 4px 12px;
+    border-radius: 100px; margin-bottom: 1.25rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .plan-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px; font-weight: 500;
+    color: var(--text-muted); margin-bottom: 6px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .plan.featured .plan-name { color: rgba(255,255,255,0.5); }
+
+  .plan-price {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3rem; font-weight: 800; letter-spacing: -2px;
+    line-height: 1; color: var(--text);
+  }
+  .plan.featured .plan-price { color: white; }
+
+  .plan-freq {
+    font-size: 13px; color: var(--text-faint); margin-bottom: 1.75rem;
+  }
+  .plan.featured .plan-freq { color: rgba(255,255,255,0.35); }
+
+  .plan-divider {
+    height: 0.5px; background: var(--border); margin-bottom: 1.5rem;
+  }
+  .plan.featured .plan-divider { background: rgba(255,255,255,0.1); }
+
+  .plan-feature {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--text-muted);
+    margin-bottom: 12px; line-height: 1.5;
+  }
+  .plan.featured .plan-feature { color: rgba(255,255,255,0.65); }
+
+  .check {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--green-light); flex-shrink: 0; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .plan.featured .check { background: rgba(29,158,117,0.25); }
+
+  .plan-btn {
+    width: 100%; margin-top: 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    padding: 13px; border-radius: 100px; cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    text-decoration: none; display: block; text-align: center;
+  }
+
+  .plan-btn.solid-green {
+    background: var(--green); color: white; border: none;
+  }
+  .plan-btn.solid-black {
+    background: white; color: var(--black); border: none;
+  }
+  .plan-btn.outline {
+    background: transparent; color: var(--text);
+    border: 0.5px solid var(--border-strong);
+  }
+  .plan-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { padding: 6rem 1.5rem; max-width: 960px; margin: 0 auto; }
+
+  .testi-header { text-align: center; margin-bottom: 3rem; }
+  .testi-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800; letter-spacing: -1px;
+  }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+
+  .testi-card {
+    border: 0.5px solid var(--border);
+    border-radius: 16px; padding: 1.75rem;
+  }
+
+  .testi-stars { color: var(--green); font-size: 14px; margin-bottom: 1rem; letter-spacing: 2px; }
+
+  .testi-text {
+    font-size: 15px; line-height: 1.7; color: var(--text);
+    margin-bottom: 1.25rem; font-style: italic;
+  }
+
+  .testi-author { display: flex; align-items: center; gap: 10px; }
+
+  .testi-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--green-light); color: var(--green-dark);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700; font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .testi-name { font-size: 13px; font-weight: 500; }
+  .testi-role { font-size: 12px; color: var(--text-faint); }
+
+  /* ── FAQ ── */
+  .faq { padding: 6rem 1.5rem; background: var(--bg-2); }
+  .faq-inner { max-width: 680px; margin: 0 auto; }
+
+  .faq-header { text-align: center; margin-bottom: 3rem; }
+  .faq-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800; letter-spacing: -1px;
+  }
+
+  .faq-item {
+    border-bottom: 0.5px solid var(--border); padding: 1.35rem 0;
+  }
+
+  .faq-q {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+
+  .faq-icon {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--green-light); color: var(--green-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; transition: background 0.2s;
+  }
+  .faq-item.open .faq-icon { background: var(--green); color: white; }
+
+  .faq-q-text::after { content: '+'; }
+  .faq-item.open .faq-q-text::after { content: '−'; }
+
+  .faq-a {
+    font-size: 14px; color: var(--text-muted); line-height: 1.75;
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding-top: 0.9rem; }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 7rem 1.5rem;
+    background: var(--bg-dark);
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800; letter-spacing: -2px; color: white;
+    line-height: 1.1; margin-bottom: 1.25rem;
+    max-width: 700px; margin-left: auto; margin-right: auto;
+  }
+
+  .cta-section h2 span { color: var(--green); }
+
+  .cta-section p {
+    font-size: 17px; color: rgba(255,255,255,0.5);
+    margin-bottom: 2.5rem; font-weight: 300;
+  }
+
+  .btn-green {
+    background: var(--green); color: white; border: none;
+    font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500;
+    padding: 18px 40px; border-radius: 100px; cursor: pointer;
+    text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-green:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  .cta-note {
+    font-size: 13px; color: rgba(255,255,255,0.25);
+    margin-top: 1.25rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 1.75rem 2.5rem;
+    border-top: 0.5px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; font-size: 15px;
+    text-decoration: none; color: var(--text);
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-copy { font-size: 12px; color: var(--text-faint); }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    .hero { padding: 4.5rem 1.25rem 3.5rem; }
+    .stats-bar { flex-direction: column; border-radius: 12px; }
+    .stat { border-right: none; border-bottom: 0.5px solid var(--border); }
+    .stat:last-child { border-bottom: none; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-dot"></div>
+    MY HERO SERVICE
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="mailto:hello@myheroservice.co.uk" class="nav-cta">Get started →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <div class="badge-live"></div>
+    Now taking on new clients — UK small businesses
+  </div>
+
+  <h1>
+    Stop doing social<br>
+    media <span class="strikethrough">yourself</span>.<br>
+    <span class="highlight">We handle everything.</span>
+  </h1>
+
+  <p class="hero-sub">
+    A full month of content, strategy, and scheduling —
+    <strong>delivered in 48 hours.</strong> AI-powered.
+    Done for you. Starting from <strong>£149/month</strong>.
+  </p>
+
+  <div class="cta-row">
+    <a href="mailto:hello@myheroservice.co.uk" class="btn-black">Start today — from £149/mo</a>
+    <a href="#how" class="btn-ghost">See how it works</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">48hrs</div>
+      <div class="stat-label">Content delivered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Posts per month</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3x</div>
+      <div class="stat-label">Platforms covered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">£0</div>
+      <div class="stat-label">Extra effort from you</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <h2>Running a business is hard enough.<br>Social media <span>shouldn't slow you down</span>.</h2>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>No time to post consistently</h4>
+        <p>You know you should be posting every day. You don't. The algorithm punishes you for it.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>Agencies cost a fortune</h4>
+        <p>Traditional social media agencies charge £1,000–£3,000/month. Most small businesses can't afford that.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>Random content gets no results</h4>
+        <p>Posting without strategy means posting into the void. Likes don't pay the bills.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>You don't know what to say</h4>
+        <p>Coming up with fresh ideas every week is exhausting — especially when you're running everything alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="solution-header">
+    <span class="tag">The solution</span>
+    <h2>Everything done for you.<br>Nothing to figure out.</h2>
+    <p>We use AI tools combined with real strategy to deliver a complete social media system — every month.</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature big">
+      <div class="feature-icon" style="margin-bottom:0;">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2 5h5l-4 3 1.5 5L11 13l-4.5 2 1.5-5L4 7h5l2-5z" fill="#1D9E75"/></svg>
+      </div>
+      <div>
+        <h3>AI-powered, strategist-approved</h3>
+        <p>We use cutting-edge AI to research your audience, find your best-performing content formats, and generate 30 days of posts. Then a real strategist reviews everything before it lands in your inbox. You get the speed of AI with the quality of expert thinking.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#1D9E75" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Delivered in 48 hours</h3>
+      <p>After your onboarding call, your full month of content is in your inbox within 48 hours. No waiting weeks for an agency to get started.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="#1D9E75" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Audience research included</h3>
+      <p>We identify who your ideal customers are, what they care about, and what makes them hit follow and buy.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 15l5-5 3 3 6-7" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Monthly performance reports</h3>
+      <p>Every month we analyse what worked, what didn't, and optimise your strategy for the next 30 days.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1.5" stroke="#1D9E75" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5" stroke="#1D9E75" stroke-width="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5" stroke="#1D9E75" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="#1D9E75" stroke-width="1.5"/></svg>
+      </div>
+      <h3>All 3 platforms covered</h3>
+      <p>Instagram, TikTok, and Facebook — content reformatted for each one's unique algorithm and audience.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <span class="tag">The process</span>
+      <h2>Live in 48 hours. Here's how.</h2>
+      <p>A simple 4-step process that runs itself every month.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-num">1</div>
+        <div class="tl-content">
+          <div class="tl-time">Day 1 — 30 minutes</div>
+          <h4>Onboarding call</h4>
+          <p>We learn your brand, your products, your tone of voice, and your goals. That's all we need. You don't prepare anything — we ask the right questions.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">2</div>
+        <div class="tl-content">
+          <div class="tl-time">Day 1–2 — We get to work</div>
+          <h4>AI audience research & content creation</h4>
+          <p>We run AI-driven research on your ideal customer, then generate a full month of captions, content ideas, and posting strategy tailored specifically to your brand.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">3</div>
+        <div class="tl-content">
+          <div class="tl-time">Day 2 — In your inbox</div>
+          <h4>You review and approve</h4>
+          <p>We send over your full content pack. You review it, request any tweaks, and approve. Then either you schedule it yourself, or we handle that too.</p>
+        </div>
+      </div>
+      <div class="tl-item" style="padding-bottom:0;">
+        <div class="tl-num">4</div>
+        <div class="tl-content">
+          <div class="tl-time">Every month — Ongoing</div>
+          <h4>Monthly review and next month's content</h4>
+          <p>We check your analytics, see what's performing, and use those insights to make next month's content even better. The system keeps improving.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="compare">
+  <div class="compare-header">
+    <span class="tag">Why us</span>
+    <h2>Compare your options</h2>
+  </div>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="us">My Hero Service</th>
+        <th>Social media agency</th>
+        <th>DIY / tools</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monthly cost</td>
+        <td class="us tick">From £149</td>
+        <td>£1,000–£3,000+</td>
+        <td>£0–£50 (your time)</td>
+      </tr>
+      <tr>
+        <td>Content delivered in</td>
+        <td class="us tick">48 hours</td>
+        <td>1–2 weeks</td>
+        <td>Whenever you find time</td>
+      </tr>
+      <tr>
+        <td>AI-powered research</td>
+        <td class="us tick">✓ Included</td>
+        <td>Sometimes</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Done for you</td>
+        <td class="us tick">✓ Fully</td>
+        <td>✓ Yes</td>
+        <td>✗ You do everything</td>
+      </tr>
+      <tr>
+        <td>No long contracts</td>
+        <td class="us tick">✓ Cancel anytime</td>
+        <td>Usually 6–12 month contracts</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>UK-based service</td>
+        <td class="us tick">✓ Yes</td>
+        <td>Varies</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <span class="tag">Pricing</span>
+      <h2>Straightforward pricing.<br>No surprises.</h2>
+      <p>Cancel any time. No long contracts. No hidden fees.</p>
+    </div>
+    <div class="plans">
+
+      <div class="plan">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">£149</div>
+        <div class="plan-freq">per month · cancel anytime</div>
+        <div class="plan-divider"></div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>30 captions & content ideas</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>AI audience research report</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>1 platform of your choice</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Delivered in 48 hours</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Monthly performance review</div>
+        <a href="mailto:hello@myheroservice.co.uk?subject=Starter Plan" class="plan-btn outline">Get started</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-price">£249</div>
+        <div class="plan-freq">per month · cancel anytime</div>
+        <div class="plan-divider"></div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#1D9E75" stroke-width="1.4" stroke-linecap="round"/></svg></div>Everything in Starter</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#1D9E75" stroke-width="1.4" stroke-linecap="round"/></svg></div>All 3 platforms included</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#1D9E75" stroke-width="1.4" stroke-linecap="round"/></svg></div>Engagement strategy playbook</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#1D9E75" stroke-width="1.4" stroke-linecap="round"/></svg></div>Content scheduling handled</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#1D9E75" stroke-width="1.4" stroke-linecap="round"/></svg></div>Priority support</div>
+        <a href="mailto:hello@myheroservice.co.uk?subject=Growth Plan" class="plan-btn solid-black">Get started</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name">Scale</div>
+        <div class="plan-price">£399</div>
+        <div class="plan-freq">per month · cancel anytime</div>
+        <div class="plan-divider"></div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Everything in Growth</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Dedicated account manager</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Paid ads strategy</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Weekly check-in calls</div>
+        <div class="plan-feature"><div class="check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div>Competitor analysis</div>
+        <a href="mailto:hello@myheroservice.co.uk?subject=Scale Plan" class="plan-btn solid-green">Get started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testi-header">
+    <span class="tag">Results</span>
+    <h2>What our clients say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Within the first month our Instagram engagement tripled. The content actually sounds like us — I was amazed at how well they captured our brand voice from just a 30-minute call."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SM</div>
+        <div>
+          <div class="testi-name">Sarah M.</div>
+          <div class="testi-role">Founder, sustainable homeware brand</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"I was spending 6–8 hours a week on social media and getting nowhere. Now I spend zero hours and the results are better than anything I managed myself."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JK</div>
+        <div>
+          <div class="testi-name">James K.</div>
+          <div class="testi-role">Owner, independent clothing brand</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The 48-hour turnaround is not a gimmick — I genuinely had my first month of content ready before I'd even finished my morning coffee after the call."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">LP</div>
+        <div>
+          <div class="testi-name">Lauren P.</div>
+          <div class="testi-role">Co-founder, eco beauty brand</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="tag">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>Do I need to provide any content or images?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">For captions and strategy — no, we handle everything. For product images on certain platforms, it helps if you can share your existing photos. But we work with whatever you have and tell you exactly what would improve results.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>How does the 48-hour delivery actually work?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">After your 30-minute onboarding call, we run our AI audience research and content generation process. Within 48 hours you receive a complete content pack — 30+ captions, a content calendar, hashtag strategy, and posting recommendations — straight to your inbox.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>Do you post the content for me or do I do it?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">On the Starter plan, we deliver the content and you post it yourself. On Growth and Scale, we handle the scheduling too — so you genuinely don't have to touch it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>What if I don't like the content?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">We offer unlimited revisions until you're happy. In our experience, the onboarding call gives us enough to get it right first time — but if anything needs adjusting, just say and we'll fix it same day.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>Is there a contract or minimum commitment?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">No contracts, no minimum term. You pay monthly and can cancel with 30 days notice. We earn your business every single month.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>How quickly will I see results?</span>
+        <div class="faq-icon"><span class="faq-q-text"></span></div>
+      </div>
+      <div class="faq-a">Most clients see noticeable engagement improvements within 2–4 weeks of consistent posting. Real audience growth and follower increases typically kick in from month 2 onwards as the algorithm picks up your consistency.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Your next customer is<br>already on <span>social media</span>.</h2>
+  <p>Let's make sure they find you. First month of content in 48 hours.</p>
+  <a href="mailto:hello@myheroservice.co.uk" class="btn-green">Get started from £149/month →</a>
+  <p class="cta-note">No contracts · Cancel anytime · UK-based service</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    <div class="logo-dot"></div>
+    MY HERO SERVICE
+  </a>
+  <div class="footer-links">
+    <a href="mailto:hello@myheroservice.co.uk">hello@myheroservice.co.uk</a>
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="footer-copy">© 2025 My Hero Service · UK</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
