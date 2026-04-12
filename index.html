@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>My Hero Service — A Month of Content. Done in 48 Hours.</title>
-<meta name="description" content="AI-powered done-for-you social media management for small businesses. 30 custom posts, audience research, and full strategy — delivered in 48 hours from £149/month." />
+<title>My Hero Service — Done-for-You Social Media for UK E-Commerce Businesses.</title>
+<meta name="description" content="AI-powered done-for-you social media management built for UK small e-commerce businesses. 30 custom posts, audience research, and full strategy — delivered in 48 hours from £149/month." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -77,76 +77,37 @@
 
   /* DELIVERABLES */
   .deliverables { padding: 6rem 1.5rem; max-width: 1000px; margin: 0 auto; }
-
-  .deliverables-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 14px;
-  }
-
-  .deliverable-card {
-    border: 0.5px solid var(--border);
-    border-radius: 16px; padding: 1.75rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
+  .deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .deliverable-card { border: 0.5px solid var(--border); border-radius: 16px; padding: 1.75rem; transition: border-color 0.2s, transform 0.2s; }
   .deliverable-card:hover { border-color: var(--green-mid); transform: translateY(-3px); }
-
-  .deliverable-card.featured {
-    background: #0e0e0e; border-color: #0e0e0e;
-    grid-column: span 2;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;
-  }
-
+  .deliverable-card.featured { background: #0e0e0e; border-color: #0e0e0e; grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
   @media (max-width: 640px) { .deliverable-card.featured { grid-column: span 1; grid-template-columns: 1fr; } }
-
-  .del-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: var(--green-light);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.25rem; flex-shrink: 0;
-  }
-
+  .del-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--green-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; flex-shrink: 0; }
   .deliverable-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.3px; }
   .deliverable-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
-
   .deliverable-card.featured h3 { font-size: 24px; color: white; }
   .deliverable-card.featured p { color: rgba(255,255,255,0.55); font-size: 15px; line-height: 1.75; }
-
   .del-list { list-style: none; margin-top: 1.25rem; }
-  .del-list li {
-    display: flex; align-items: flex-start; gap: 10px;
-    font-size: 14px; color: rgba(255,255,255,0.7);
-    padding: 8px 0; border-bottom: 0.5px solid rgba(255,255,255,0.07);
-    line-height: 1.5;
-  }
+  .del-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.7); padding: 8px 0; border-bottom: 0.5px solid rgba(255,255,255,0.07); line-height: 1.5; }
   .del-list li:last-child { border-bottom: none; }
   .del-check { color: var(--green); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
-  /* WHAT YOU GET PER PLAN */
+  /* PRICING */
   .per-plan { padding: 6rem 1.5rem; background: var(--bg-2); }
   .per-plan-inner { max-width: 960px; margin: 0 auto; }
-
   .pack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 3rem; }
-
   .pack-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: 16px; overflow: hidden; }
   .pack-card.featured { border: 2px solid var(--green); }
-
   .pack-header { padding: 1.5rem 1.75rem; border-bottom: 0.5px solid var(--border); }
   .pack-card.featured .pack-header { background: var(--green-light); border-bottom-color: var(--green-mid); }
-
   .pack-badge { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; margin-bottom: 0.75rem; font-family: 'DM Sans', sans-serif; }
-
   .pack-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
   .pack-price { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.2rem; font-weight: 800; letter-spacing: -1.5px; color: var(--green); line-height: 1; margin-top: 4px; }
   .pack-freq { font-size: 12px; color: var(--text-faint); margin-top: 2px; }
-
   .pack-body { padding: 1.5rem 1.75rem; }
-
   .pack-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
   .pack-item strong { color: var(--text); font-weight: 500; }
-
   .pack-check { width: 18px; height: 18px; border-radius: 50%; background: var(--green-light); flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
-
   .pack-btn { display: block; width: calc(100% - 3.5rem); margin: 0 1.75rem 1.75rem; text-align: center; padding: 13px; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity 0.2s, transform 0.15s; cursor: pointer; }
   .pack-btn:hover { opacity: 0.85; transform: translateY(-1px); }
   .pack-btn.solid { background: var(--green); color: white; border: none; }
@@ -242,9 +203,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge"><div class="badge-live"></div>Now taking on new clients — UK small businesses</div>
-  <h1>Stop doing social media <span class="strikethrough">yourself</span>.<br><span class="highlight">We handle everything.</span></h1>
-  <p class="hero-sub">A full month of content, strategy, and scheduling — <strong>delivered in 48 hours.</strong> AI-powered. Done for you. Starting from <strong>£149/month</strong>.</p>
+  <div class="hero-badge"><div class="badge-live"></div>Now taking on new clients — UK small e-commerce businesses only</div>
+  <h1>Your products deserve<br>to be seen.<br><span class="strikethrough">You just don't have time.</span><br><span class="highlight">We handle everything.</span></h1>
+  <p class="hero-sub">A full month of sales-focused content, strategy, and scheduling — <strong>built for your store, delivered in 48 hours.</strong> AI-powered. Done for you. From <strong>£149/month</strong>.</p>
   <div class="cta-row">
     <a href="mailto:hello@myheroservice.co.uk" class="btn-black">Start today — from £149/mo</a>
     <a href="#how" class="btn-ghost">See how it works</a>
@@ -260,12 +221,28 @@
 <!-- PROBLEM -->
 <section class="problem">
   <div class="problem-inner">
-    <h2>Running a business is hard enough.<br>Social media <span>shouldn't slow you down</span>.</h2>
+    <h2>Running a store is a full-time job.<br>Social media <span>shouldn't be a second one.</span></h2>
     <div class="pain-grid">
-      <div class="pain-item"><div class="pain-x">✕</div><h4>No time to post consistently</h4><p>You know you should be posting every day. You don't. The algorithm punishes you for it.</p></div>
-      <div class="pain-item"><div class="pain-x">✕</div><h4>Agencies cost a fortune</h4><p>Traditional social media agencies charge £1,000–£3,000/month. Most small businesses simply can't afford it.</p></div>
-      <div class="pain-item"><div class="pain-x">✕</div><h4>Random content gets no results</h4><p>Posting without a strategy means posting into the void. Likes don't pay the bills.</p></div>
-      <div class="pain-item"><div class="pain-x">✕</div><h4>You don't know what to say</h4><p>Coming up with fresh ideas every week is exhausting — especially when you're running everything alone.</p></div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>No time to post consistently</h4>
+        <p>You're packing orders, handling customers, and running the business. The algorithm doesn't care — inconsistency kills your reach and buries your products.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>Agencies charge what you make in a month</h4>
+        <p>Traditional social media agencies quote £1,000–£3,000/month. For a small e-commerce business, that's not a marketing cost — that's a profit wipe.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>Random posting doesn't move product</h4>
+        <p>Posting a photo and hoping for sales isn't a strategy. Without hooks, captions built to convert, and a content system — you're just feeding the void.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-x">✕</div>
+        <h4>You've got no idea what to say</h4>
+        <p>Coming up with fresh content ideas every week — on top of everything else — is exhausting. And the blank page never gets easier.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -286,11 +263,11 @@
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2 5h5l-4 3 1.5 5L11 13l-4.5 2 1.5-5L4 7h5l2-5z" fill="#1D9E75"/></svg>
         </div>
         <h3>30 custom captions & content ideas</h3>
-        <p>Not templates. Every caption is written specifically for your brand, your voice, and your audience. Each post includes a hook, body copy, call to action, and hashtag set — ready to copy and paste.</p>
+        <p>Not templates. Every caption is written specifically for your brand, your products, and your customers. Each post includes a hook, body copy, call to action, and hashtag set — built to stop the scroll and drive sales.</p>
       </div>
       <ul class="del-list">
         <li><span class="del-check">✓</span> Written in your brand voice</li>
-        <li><span class="del-check">✓</span> Hook + body + CTA structure</li>
+        <li><span class="del-check">✓</span> Hook + body + CTA structure — built to convert</li>
         <li><span class="del-check">✓</span> Hashtag research included per post</li>
         <li><span class="del-check">✓</span> Formatted for each platform</li>
         <li><span class="del-check">✓</span> Delivered as a Google Doc</li>
@@ -303,7 +280,7 @@
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#0F6E56" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <h3>Content calendar</h3>
-      <p>A full 30-day posting calendar with optimal days and times to post — tailored to when your specific audience is most active. No more guessing when to publish.</p>
+      <p>A full 30-day posting calendar with optimal days and times — tailored to when your specific audience is most active. No more guessing when to publish.</p>
     </div>
 
     <div class="deliverable-card">
@@ -311,7 +288,7 @@
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="4" stroke="#0F6E56" stroke-width="1.5"/><path d="M3 17c0-3 3-5 7-5s7 2 7 5" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <h3>AI audience research report</h3>
-      <p>A written report identifying your ideal customer — their interests, behaviours, pain points, and what type of content makes them engage and buy. Updated every quarter.</p>
+      <p>A written report identifying your ideal customer — their interests, behaviours, pain points, and the type of content that makes them engage and buy. Updated every quarter.</p>
     </div>
 
     <div class="deliverable-card">
@@ -357,13 +334,13 @@
   </div>
 </section>
 
-<!-- PER PLAN BREAKDOWN -->
+<!-- PRICING -->
 <section class="per-plan" id="pricing">
   <div class="per-plan-inner">
     <div class="section-header">
       <span class="tag">Pricing</span>
       <h2>Choose your plan.</h2>
-      <p>Every plan includes the core deliverables. Higher plans add more platforms, more content, and more hands-on support.</p>
+      <p>Every plan includes the core deliverables. Higher plans add more platforms, more content, and more hands-on support. Cancel anytime — no contracts, no stress.</p>
     </div>
 
     <div class="pack-grid">
@@ -383,6 +360,7 @@
           <div class="pack-item"><div class="pack-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div><span>Hashtag research pack</span></div>
           <div class="pack-item"><div class="pack-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div><span>Monthly performance report</span></div>
           <div class="pack-item"><div class="pack-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div><span>Delivered in <strong>48 hours</strong></span></div>
+          <div class="pack-item"><div class="pack-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M2 4.5l2 2 3-3" stroke="#0F6E56" stroke-width="1.4" stroke-linecap="round"/></svg></div><span>Unlimited revisions</span></div>
         </div>
         <a href="mailto:hello@myheroservice.co.uk?subject=Starter Plan" class="pack-btn outline">Get started</a>
       </div>
@@ -440,7 +418,7 @@
         <div class="tl-content">
           <div class="tl-time">Day 1 — 30 minutes</div>
           <h4>Onboarding call</h4>
-          <p>We learn your brand, products, tone of voice, and goals. That's all we need. You don't prepare anything — we ask the right questions and take notes.</p>
+          <p>We learn your brand, products, tone of voice, target customer, and goals. You don't prepare anything — we ask the right questions and take notes. That's it from you.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -448,7 +426,7 @@
         <div class="tl-content">
           <div class="tl-time">Day 1–2 — We get to work</div>
           <h4>AI research & content creation</h4>
-          <p>We run AI-driven audience research, build your brand voice document, write 30 custom captions, build your content calendar, and package your Reel ideas — all in 48 hours.</p>
+          <p>We run AI-powered audience research, build your brand voice document, write 30 custom captions, build your content calendar, and package your Reel ideas — all within 48 hours of your call.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -456,15 +434,15 @@
         <div class="tl-content">
           <div class="tl-time">Day 2 — In your inbox</div>
           <h4>You review and approve</h4>
-          <p>We send your full content pack as a Google Doc. You review it, request any tweaks, and approve. Revisions are unlimited and we turn them around fast.</p>
+          <p>We send your full content pack as a Google Doc. Review it, request any tweaks, and approve. Revisions are unlimited — we turn them around fast. Most clients approve within 24 hours.</p>
         </div>
       </div>
       <div class="tl-item" style="padding-bottom:0;">
         <div class="tl-num">4</div>
         <div class="tl-content">
           <div class="tl-time">Every month — Ongoing</div>
-          <h4>Review, optimise, repeat</h4>
-          <p>Each month we check your analytics, identify what's performing, and use those insights to make the next month's content even sharper. The strategy keeps improving.</p>
+          <h4>We analyse, improve, repeat</h4>
+          <p>Each month we check your analytics, identify what's performing, and use those insights to make the next month's content even sharper. The strategy keeps improving the longer you work with us.</p>
         </div>
       </div>
     </div>
@@ -476,26 +454,26 @@
   <div class="compare-inner">
     <div class="section-header">
       <span class="tag">Why us</span>
-      <h2>Compare your options</h2>
+      <h2>Not an agency. Not a freelancer.<br>Something better.</h2>
     </div>
     <table class="compare-table">
       <thead>
         <tr>
           <th></th>
           <th class="us">My Hero Service</th>
-          <th>Social media agency</th>
+          <th>Traditional agency</th>
           <th>DIY / tools</th>
         </tr>
       </thead>
       <tbody>
         <tr><td>Monthly cost</td><td class="us">From £149</td><td>£1,000–£3,000+</td><td>£0–£50 (+ your time)</td></tr>
         <tr><td>Content delivered in</td><td class="us">48 hours</td><td>1–2 weeks</td><td>Whenever you find time</td></tr>
+        <tr><td>E-commerce focused</td><td class="us">✓ Built for it</td><td>Generic</td><td>✗</td></tr>
         <tr><td>Custom captions (not templates)</td><td class="us">✓ 30/month</td><td>Sometimes</td><td>✗ You write them</td></tr>
         <tr><td>AI audience research</td><td class="us">✓ Every month</td><td>Rarely included</td><td>✗</td></tr>
         <tr><td>Reel & TikTok ideas</td><td class="us">✓ 8/month</td><td>Extra cost</td><td>✗</td></tr>
-        <tr><td>Brand voice document</td><td class="us">✓ Included</td><td>Sometimes</td><td>✗</td></tr>
-        <tr><td>No long contracts</td><td class="us">✓ Cancel anytime</td><td>Usually 6–12 months</td><td>✓</td></tr>
-        <tr><td>UK-based service</td><td class="us">✓ Yes</td><td>Varies</td><td>—</td></tr>
+        <tr><td>No long contracts</td><td class="us">✓ Cancel anytime</td><td>6–12 month lock-in</td><td>✓</td></tr>
+        <tr><td>Unlimited revisions</td><td class="us">✓ Always included</td><td>Extra cost</td><td>—</td></tr>
       </tbody>
     </table>
   </div>
@@ -531,27 +509,31 @@
   <div class="faq-inner">
     <div class="section-header">
       <span class="tag">FAQ</span>
-      <h2>Common questions</h2>
+      <h2>Got questions? Honest answers.</h2>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>What exactly do I receive each month?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
-      <div class="faq-a">Every month you receive: 30 custom captions, a content calendar with optimal posting times, a hashtag research pack, an AI audience research report, 8 Reel/TikTok ideas with directions, an engagement strategy playbook, and a monthly performance report. All delivered as a Google Doc within 48 hours of your onboarding call.</div>
+      <div class="faq-q"><span>Do I need to be on social media already?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
+      <div class="faq-a">No. We can work with a brand new account or an existing one. We'll assess where you are and build from there.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>Do I need to provide any content or images?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
-      <div class="faq-a">For captions, strategy, and ideas — no, we handle everything. For product images on visual platforms like Instagram, it helps if you can share your existing photos. We'll tell you exactly what we need and work with whatever you have.</div>
+      <div class="faq-q"><span>Will the content actually sound like me?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
+      <div class="faq-a">Yes — that's the whole point. We build a brand voice document from your onboarding call, and every piece of content is written to match your tone. If anything doesn't sound right, we revise it for free until it does.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>How does the 48-hour delivery work?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
-      <div class="faq-a">After your 30-minute onboarding call, we run our AI audience research and content generation process. Within 48 hours your full content pack lands in your inbox — 30 captions, a content calendar, hashtag strategy, Reel ideas, and your brand voice document.</div>
+      <div class="faq-q"><span>I've tried other services and got generic content. How is this different?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
+      <div class="faq-a">Most services use templates. We don't. Your content is created from scratch using AI research specific to your brand, your niche, and your audience. It's built to sell your products — not just fill a grid.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>What do I actually have to do?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
+      <div class="faq-a">Show up for a 30-minute onboarding call. After that, review your content pack and approve it. That's it. We handle everything else.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q"><span>Do you post the content for me?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
       <div class="faq-a">On the Starter plan, we deliver everything and you post it yourself. On Growth and Scale plans, we handle scheduling too — so you genuinely don't have to touch it.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>What if I don't like the content?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
-      <div class="faq-a">We offer unlimited revisions until you're 100% happy. In practice, the onboarding call gives us everything we need to get it right first time — but if anything needs tweaking, we fix it same day.</div>
+      <div class="faq-q"><span>Is this just AI writing everything automatically?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
+      <div class="faq-a">AI powers the research and drafting — but every piece of content is reviewed, refined, and quality-checked before it reaches you. You get the speed of AI with the judgement of a real strategist.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q"><span>Is there a contract or minimum commitment?</span><div class="faq-icon"><span class="faq-plus"></span></div></div>
@@ -566,9 +548,9 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Your next customer is already<br>on <span>social media</span>.</h2>
-  <p>Let's make sure they find you. First month delivered in 48 hours.</p>
-  <a href="mailto:hello@myheroservice.co.uk" class="btn-green">Get started from £149/month →</a>
+  <h2>Your store deserves a social media presence<br>that actually <span>sells</span>.</h2>
+  <p>Join UK e-commerce businesses already getting consistent, professional content — without lifting a finger.</p>
+  <a href="mailto:hello@myheroservice.co.uk" class="btn-green">Start today — from £149/month →</a>
   <p class="cta-note">No contracts · Cancel anytime · UK-based · Delivered in 48 hours</p>
 </section>
 
